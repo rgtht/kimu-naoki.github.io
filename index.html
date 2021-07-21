@@ -95,6 +95,16 @@
     </div>
   </div>
   <script>
+
+    window.onload = () => {
+      var mobileDevices = ['iPhone', 'iPad', 'iPod']
+      for (var i = 0; i < mobileDevice.length; i++) {
+        if (navigator.userAgent.match(mobileDevice[i])) {
+          document.getElementById("fullscreen").style.display = "none"
+        }
+      }
+    }
+
     window.addEventListener('orientationchange', () => {
       document.documentElement.style.height = `initial`;
       setTimeout(() => {
