@@ -117,8 +117,9 @@
       setTimeout(() => {
         if (!isIOS) {
           document.getElementById("fullscreen").click();
+          document.body.requestFullscreen();
         }
-      }, 20000);
+      }, 10000);
     }
 
     window.addEventListener('orientationchange', () => {
