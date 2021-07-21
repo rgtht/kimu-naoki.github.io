@@ -98,8 +98,8 @@
 
     window.onload = () => {
       var mobileDevices = ['iPhone', 'iPad', 'iPod']
-      for (var i = 0; i < mobileDevice.length; i++) {
-        if (navigator.userAgent.match(mobileDevice[i])) {
+      for (var i = 0; i < mobileDevices.length; i++) {
+        if (navigator.userAgent.match(mobileDevices[i])) {
           document.getElementById("fullscreen").style.display = "none"
         }
       }
