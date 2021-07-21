@@ -8,12 +8,12 @@ window.onload = () => {
         }
     }
 
-    setTimeout(() => {
-        if (!isIOS) {
-            document.getElementById("fullscreen").click();
-            document.body.requestFullscreen();
-        }
-    }, 10000);
+//     setTimeout(() => {
+//         if (!isIOS) {
+//             document.getElementById("fullscreen").click();
+//             document.body.requestFullscreen();
+//         }
+//     }, 10000);
 }
 
 window.addEventListener('orientationchange', () => {
