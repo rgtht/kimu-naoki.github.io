@@ -12,6 +12,39 @@
   <script>
     var unityInstance = UnityLoader.instantiate("unityContainer", "Build/test1 NFullSceen.json", { onProgress: UnityProgress });
   </script>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .webgl-content {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #unityContainer {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .webgl-logo {
+      display: none;
+    }
+
+    .title {
+      display: none;
+    }
+
+    .fullscreen {
+      position: absolute;
+      display: inline-block;
+      float: none;
+      height: 38px;
+      z-index: 1;
+      bottom: 17px;
+      right: 110px;
+    }
+  </style>
 </head>
 
 <body>
@@ -19,16 +52,10 @@
     <div id="unityContainer" style="width: 960px; height: 600px"></div>
     <div class="footer">
       <div class="webgl-logo"></div>
-      <div class="fullscreen" id="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+      <div class="fullscreen" id="fullscreen" onclick="unityInstance.SetFullscreen(1)">全螢幕</div>
       <div class="title">Test1</div>
     </div>
   </div>
-  <script>
-    window.onload = function () {
-      
-      setTimeout(function(){ document.getElementById("fullscreen").click(); }, 10000);
-    };
-  </script>
 </body>
 
 </html>
