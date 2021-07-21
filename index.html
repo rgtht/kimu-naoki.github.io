@@ -93,7 +93,7 @@
     </div>
   </div>
   <script>
-    document.addEventListener('orientationchange', () => {
+    window.addEventListener('orientationchange', () => {
       document.documentElement.style.height = `initial`;
       setTimeout(() => {
         document.documentElement.style.height = `100%`;
