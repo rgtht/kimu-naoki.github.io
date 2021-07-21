@@ -34,7 +34,7 @@
       padding-right: constant(safe-area-inset-right);
       padding-bottom: constant(safe-area-inset-bottom);
       padding-left: constant(safe-area-inset-left);
-      
+
       padding-top: env(safe-area-inset-top);
       padding-right: env(safe-area-inset-right);
       padding-bottom: env(safe-area-inset-bottom);
@@ -92,6 +92,19 @@
       <div class="title">Test1</div>
     </div>
   </div>
+  <script>
+    document.addEventListener('orientationchange', () => {
+      document.documentElement.style.height = `initial`;
+      setTimeout(() => {
+        document.documentElement.style.height = `100%`;
+        setTimeout(() => {
+          // this line prevents the content
+          // from hiding behind the address bar
+          window.scrollTo(0, 1);
+        }, 500);
+      }, 500);
+    });
+  </script>
 </body>
 
 </html>
