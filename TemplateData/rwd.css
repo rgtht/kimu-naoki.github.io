@@ -5,6 +5,8 @@ html {
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    margin: env(safe-area-inset);
+  padding: env(safe-area-inset);
   }
 
   body {
@@ -14,13 +16,15 @@ html {
   }
 
   .webgl-content {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     position: relative;
     top: 0;
     left: 0;
     -webkit-transform: none;
     transform: none;
+      margin: env(safe-area-inset);
+  object-fit: cover;
   }
 
   #unityContainer {
