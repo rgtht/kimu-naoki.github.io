@@ -52,7 +52,7 @@ html {
     bottom: 0;
     right: 0;
     opacity: 0;
-    background-image: none;
+    background: none;
   }
 
   @media (orientation: landscape) {
