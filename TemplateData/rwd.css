@@ -5,30 +5,27 @@ html {
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    margin: env(safe-area-inset);
-  padding: env(safe-area-inset);
   }
 
   body {
     width: 100%;
     height: 100%;
     margin: 0;
+    background-color: black;
   }
 
   .webgl-content {
-    width: 100vw;
+    width: 100%;
     height: 100%;
     position: relative;
     top: 0;
     left: 0;
     -webkit-transform: none;
     transform: none;
-      margin: env(safe-area-inset);
-  object-fit: cover;
   }
 
   #unityContainer {
-    width: 100vw !important;
+    width: 100% !important;
     height: 100% !important;
   }
 
@@ -49,24 +46,14 @@ html {
     position: absolute;
     display: inline-block;
     float: none;
-    width: 3.5vw;
-    height: 3.5vw;
-    z-index: 1;
-    bottom: 2vw;
-    right: 11.5vw;
-    background-size: cover;
+    width: 0;
+    height: 0;
+    z-index: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    background-image: none;
   }
-
-@viewport {
-    viewport-fit: cover;
-}
-
-@supports(padding:max(0px)) {
-    body, header, footer {
-        padding-left: min(0vmin, env(safe-area-inset-left));
-        padding-right: min(0vmin, env(safe-area-inset-right));
-    }
-}
 
   @media (orientation: landscape) {
     body {
@@ -79,6 +66,7 @@ html {
 
   @media (orientation: portrait) {
     body {
+      min-height: 100%;
       padding-top: constant(safe-area-inset-top);
       padding-bottom: constant(safe-area-inset-bottom);
       padding-top: env(safe-area-inset-top);
