@@ -32,11 +32,19 @@
   <script>
     var unityInstance = UnityLoader.instantiate("unityContainer", "Build/game.json", { onProgress: UnityProgress });
   </script>
+  <style>
+    #unityContainer {
+      max-width: 640px !important;
+      width: 100% !important;
+      height: 100% !important;
+      margin: auto !important;
+    }
+  </style>
 </head>
 
 <body>
   <div class="webgl-content">
-    <div id="unityContainer" style="max-width: 640px; height: 100%; margin: auto; width: 100%;"></div>
+    <div id="unityContainer"></div>
 </body>
 
 </html>
